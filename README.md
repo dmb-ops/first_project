@@ -1,77 +1,90 @@
-# Project overview
-...
+# 📊 Amazon 2025 Sales Analysis
 
-# Installation
+**Dataset:** Amazon Sales (250 transactions)  
+**Tools:** Python · Pandas · Data Wrangling · Exploratory Data Analysis · Visualization
 
-1. **Clone the repository**:
+---
 
-```bash
-git clone https://github.com/YourUsername/repository_name.git
-```
+## 🧠 Project Objective
 
-2. **Install UV**
+This project explores **sales performance patterns** in a 2025 Amazon dataset, focusing on:
 
-If you're a MacOS/Linux user type:
+- **Order status** (Completed, Cancelled, Pending)
+- **Payment methods**
+- **Customer location**
+- **Product categories & pricing**
 
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
+Our goal was to uncover actionable insights that drive **sales optimization**, **customer targeting**, and **inventory strategy**.
 
-If you're a Windows user open an Anaconda Powershell Prompt and type :
+---
 
-```bash
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
+## 🔄 Data Preparation
 
-3. **Create an environment**
+We performed essential **data wrangling and cleaning**, including:
 
-```bash
-uv venv 
-```
+- Removing duplicates and irrelevant columns (`check_total`)
+- Standardizing messy product names and date formats
+- Creating new features like `Month` and `Year` for time-based analysis
+- Verifying total sales values through a validation column
 
-3. **Activate the environment**
+---
 
-If you're a MacOS/Linux user type (if you're using a bash shell):
+## 🔍 Hypotheses Explored
 
-```bash
-source ./venv/bin/activate
-```
+| Hypothesis ID | Focus Area             | Question                                                                 |
+|---------------|------------------------|--------------------------------------------------------------------------|
+| H1            | Payment Behavior       | Do certain payment methods lead to more cancellations?                   |
+| H2            | Location Effect        | Do cities influence whether orders get completed or canceled?            |
+| H3            | Category Performances  | Do electronics outperform other categories in total sales?               |
+| H4            | Product Value          | Do high-priced products lead to more completed orders?                   |
 
-If you're a MacOS/Linux user type (if you're using a csh/tcsh shell):
+---
 
-```bash
-source ./venv/bin/activate.csh
-```
+## 📈 Key Findings
 
-If you're a Windows user type:
+- 🧾 **Gift Cards** had the **lowest completion rate** among all payment methods.
+- 🏙️ **Miami** showed an unexpectedly high number of completed orders.
+- 💡 **Electronics**:
+  - Accounted for **63% of completed sales**
+  - Drove **47.2% of total revenue**
+  - Had **high cancellation rates**, revealing volatility
+- 🔌 **Home Appliances** performed strongly in completed sales, just behind Electronics.
+- ⚠️ **Data integrity issue** discovered: `total_sales` mismatch — solved by introducing a `check_total` column.
 
-```bash
-.\venv\Scripts\activate
-```
+---
 
-4. **Install dependencies**:
+## 🧪 Lessons Learned
 
-```bash
-uv pip install -r requirements.txt
-```
+- Always validate numeric fields and **challenge assumptions**.
+- Clean, well-structured data leads to **faster, deeper insights**.
+- Visual storytelling is key in translating analytical findings into business strategy.
 
-# Questions 
-...
+---
 
-# Dataset 
-...
+## 💡 Business Recommendations
 
-## Main dataset issues
+- 🎯 Prioritize Electronics in marketing and supply chain planning.
+- 🛍️ Offer **discounts** and incentives for high-value categories.
+- 🌍 Target cities with high completion trends (e.g., **Miami**).
+- 📅 Schedule sales around months with highest historical sales.
 
-- ...
-- ...
-- ...
+---
 
-## Solutions for the dataset issues
-...
+## 📌 Next Steps
 
-# Conclussions
-...
+- Analyze customer-level behavior across time
+- Run predictive modeling for cancellation likelihood
+- Segment by seasonality and product lifecycle
 
-# Next steps
-...
+---
+
+## 👤 Team
+
+**Damian Micó Bedoya**  
+Data Analyst | SQL · Python · Tableau | Logistics & Business Intelligence  
+📫 [dmico83@gmail.com](mailto:dmico83@gmail.com) | 📍 Barcelona, Spain  
+🔗 [LinkedIn](#) | [GitHub](#)
+
+---
+
+> “Clean data, clear insights, smart business.”
